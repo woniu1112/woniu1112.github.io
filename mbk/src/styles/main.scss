@@ -1,0 +1,143 @@
+
+$worldColor: '#88b99e';
+
+html {
+  overflow-x: auto;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  overflow: hidden;
+}
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+p,
+blockquote,
+th,
+td {
+  font-weight: 400;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5 {
+  text-align: left;
+}
+
+body {
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  background: transparent url('../assets/img/bg-body.jpg') repeat-x;
+  background-color: #faf7ef;
+  padding: 10px;
+}
+
+select {
+  font-size: 12px;
+}
+
+table {
+  border-collapse: collapse;
+}
+table, td, th {
+  border: 1px solid #ccc;
+}
+t
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset p {
+  margin: 0;
+  padding: 0 0 0 8px;
+}
+
+legend {
+  display: none;
+}
+
+address,
+caption,
+em,
+strong,
+th,
+i {
+  font-style: normal;
+  font-weight: 400;
+}
+
+table caption {
+  margin-left: -1px;
+}
+
+hr {
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #E4E4E4;
+  border-width: 1px 0;
+  clear: both;
+  height: 2px;
+  margin: 5px 0;
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+/*滚动条样式*/
+#markdownBox::-webkit-scrollbar{
+  width:5px;
+  height:10px;
+}
+#markdownBox::-webkit-scrollbar-track{
+  background: radial-gradient(#b3ef85, transparent);
+  border-radius:2px;
+}
+#markdownBox::-webkit-scrollbar-thumb{
+  background: radial-gradient(#ff9900, transparent);
+  border-radius:10px;
+}
+#markdownBox::-webkit-scrollbar-thumb:hover{
+  background: #333;
+}
+#markdownBox::-webkit-scrollbar-corner{
+  background: #179a16;
+}

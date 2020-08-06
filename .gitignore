@@ -1,0 +1,17 @@
+.DS_Store
+mbk/node_modules/
+mbk/dist/
+mbk/npm-debug.log*
+mbk/yarn-debug.log*
+mbk/yarn-error.log*
+mbk/test/unit/coverage/
+mbk/test/e2e/reports/
+mbk/selenium-debug.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
