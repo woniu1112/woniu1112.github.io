@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="author">
-      <img src="@/assets/img/header.png" alt="">
+      <img src="https://avatars2.githubusercontent.com/u/23164486?s=60&v=4" alt="">
       <div class="nav">
         <a href="//www.cnblogs.com/" target="_blank">博客园</a>
         <router-link to="/articleList">文章</router-link>

@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted () {
-    const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+    modulesFiles.keys().map(modulePath => {
       const moduleName = modulePath.replace(/^.\/(.*)\.md/, '$1')
       const value = modulesFiles(modulePath)
       this.articles.push({
@@ -28,10 +28,7 @@ export default {
         tittle: this.getTittle(this.md2html(value)),
         url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
       })
-      modules[moduleName] = value
-      return modules
-    }, {})
-    console.log(this.articles)
+    })
   },
   methods: {
     titleClick (item) {

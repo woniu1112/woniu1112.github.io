@@ -7,7 +7,6 @@
 </template>
 
 <script>
-// import test from '@/article/test.md'
 import '@/styles/vue-dark.css'
 export default {
   name: 'showArticle',
