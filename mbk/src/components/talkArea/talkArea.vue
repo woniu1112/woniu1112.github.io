@@ -11,13 +11,13 @@ export default {
   data () {
     return {
       gitalk: new Gitalk({
-        id: 1,
+        // id: '1',
         clientID: '627fafddf767c8014821',
         clientSecret: '835037abb7b9be36bf5ef50d7249bd80a7493c92',
         repo: 'talkArea',
         owner: 'woniu1112', //
         admin: ['woniu1112'], // github用户名
-        labels: ['woniu1112'],
+        // labels: ['woniu1112'],
         perPage: 50,
         distractionFreeMode: false
       })
