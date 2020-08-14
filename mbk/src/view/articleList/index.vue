@@ -29,6 +29,7 @@ export default {
         url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
       })
     })
+    console.log(this.articles)
   },
   methods: {
     titleClick (item) {
@@ -38,7 +39,7 @@ export default {
     getTittle (val) {
       let el = document.createElement('div')
       el.innerHTML = val
-      return String.trim(/^<p id=tittle>(.*)<\/p>*/.exec(val)[1])
+      return el.querySelector('#tittle').innerHTML
     }
   }
 }

@@ -36,6 +36,7 @@ export default {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
+      margin-top: 10px;
     }
     p {
       text-align: center;

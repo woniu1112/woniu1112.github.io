@@ -2,6 +2,7 @@
   <div class="layout-box">
     <div class="author-box">
       <author></author>
+      <talkArea></talkArea>
     </div>
     <div class="view-container">
       <transition name="slide-fade">
@@ -15,11 +16,13 @@
 <script>
 const particles = resolve => require(['@/components/vueParticles/index'], resolve)
 const author = resolve => require(['@/components/author/author.vue'], resolve)
+const talkArea = resolve => require(['@/components/talkArea/talkArea.vue'], resolve)
 export default {
   name: 'layout',
   components: {
     particles,
-    author
+    author,
+    talkArea
   }
 }
 </script>
@@ -36,7 +39,7 @@ export default {
   }
   .view-container {
     position: relative;
-    margin-left: 260px;
+    margin-left: 316px;
     padding: 0 10px;
   }
   .slide-fade-enter-active {
