@@ -25,11 +25,10 @@ export default {
       const value = modulesFiles(modulePath)
       this.articles.push({
         name: moduleName,
-        tittle: this.getTittle(this.md2html(value)),
+        tittle: this.getTittle(value),
         url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
       })
     })
-    console.log(this.articles)
   },
   methods: {
     titleClick (item) {

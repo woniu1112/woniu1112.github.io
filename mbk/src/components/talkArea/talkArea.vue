@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       gitalk: new Gitalk({
-        // id: '1',
+        id: location.pathname,
         clientID: '627fafddf767c8014821',
         clientSecret: '835037abb7b9be36bf5ef50d7249bd80a7493c92',
         repo: 'talkArea',
