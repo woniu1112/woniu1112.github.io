@@ -27,7 +27,6 @@ export default {
     }
   },
   mounted () {
-    this.gitalk.render('gitalk-container')
   },
   methods: {
     initGitTalk (id) {
@@ -42,6 +41,7 @@ export default {
         perPage: 50,
         distractionFreeMode: false
       })
+      this.gitalk.render('gitalk-container')
     }
   }
 }
