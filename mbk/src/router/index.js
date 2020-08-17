@@ -28,7 +28,7 @@ let routes = [
 ]
 
 const router = new Router({
-  mode: 'history',
+  mode: 'hash',
   fallback: true,
   routes: routes,
   scrollBehavior (to, from, savedPosition) {
