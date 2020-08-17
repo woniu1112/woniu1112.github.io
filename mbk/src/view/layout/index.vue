@@ -35,11 +35,11 @@ export default {
   }
   .author-box {
     float: left;
-    width: 316px;
+    width: 400px;
   }
   .view-container {
     position: relative;
-    margin-left: 316px;
+    margin-left: 400px;
     padding: 0 10px;
   }
   .slide-fade-enter-active {

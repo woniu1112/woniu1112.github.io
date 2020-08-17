@@ -123,21 +123,21 @@ blockquote:after {
 }
 
 /*滚动条样式*/
-#markdownBox::-webkit-scrollbar{
+#markdownBox::-webkit-scrollbar, .gt-comments::-webkit-scrollbar{
   width:5px;
   height:10px;
 }
-#markdownBox::-webkit-scrollbar-track{
+#markdownBox::-webkit-scrollbar-track, .gt-comments::-webkit-scrollbar-track{
   background: radial-gradient(#b3ef85, transparent);
   border-radius:2px;
 }
-#markdownBox::-webkit-scrollbar-thumb{
+#markdownBox::-webkit-scrollbar-thumb, .gt-comments::-webkit-scrollbar-thumb{
   background: radial-gradient(#ff9900, transparent);
   border-radius:10px;
 }
-#markdownBox::-webkit-scrollbar-thumb:hover{
+#markdownBox::-webkit-scrollbar-thumb:hover, .gt-comments::-webkit-scrollbar-thumb:hover{
   background: #333;
 }
-#markdownBox::-webkit-scrollbar-corner{
+#markdownBox::-webkit-scrollbar-corner, .gt-comments::-webkit-scrollbar-corner{
   background: #179a16;
 }

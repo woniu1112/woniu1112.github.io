@@ -23,11 +23,12 @@ export default {
     modulesFiles.keys().map(modulePath => {
       const moduleName = modulePath.replace(/^.\/(.*)\.md/, '$1')
       const value = modulesFiles(modulePath)
-      this.articles.push({
+      let info = {
+        ...this.getTittle(value),
         name: moduleName,
-        tittle: this.getTittle(value),
         url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
-      })
+      }
+      this.articles.push(info)
     })
   },
   methods: {
@@ -38,7 +39,12 @@ export default {
     getTittle (val) {
       let el = document.createElement('div')
       el.innerHTML = val
-      return el.querySelector('#tittle').innerHTML
+      let articleInfo = {
+        tittle: el.querySelector('#tittle').innerHTML,
+        tag: el.querySelector('#tittle').getAttribute('data-tag'),
+        id: el.querySelector('#tittle').getAttribute('data-id')
+      }
+      return articleInfo
     }
   }
 }

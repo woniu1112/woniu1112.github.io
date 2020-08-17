@@ -6,11 +6,8 @@
         <a href="//www.cnblogs.com/" target="_blank">博客园</a>
         <router-link to="/articleList">文章</router-link>
       </div>
-      <p>永无止境</p>
+      <p>Email：syl18188@163.com</p>
       <CalenderComponent></CalenderComponent>
-    </div>
-    <div class="contact-type">
-      <span>Email：syl18188@163.com</span>
     </div>
   </div>
 </template>
@@ -53,8 +50,5 @@ export default {
     .wh_content_item .wh_isToday {
       background: #ccc;
     }
-  }
-  .contact-type {
-    margin-top: 20px;
   }
 </style>

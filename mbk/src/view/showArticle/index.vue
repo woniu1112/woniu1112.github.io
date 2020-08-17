@@ -2,14 +2,19 @@
   <div class="showArticle">
     <div id="markdownBox">
       <div id="write" v-html="readme"></div>
+      <talkArea></talkArea>
     </div>
   </div>
 </template>
 
 <script>
 import '@/styles/vue-dark.css'
+const talkArea = resolve => require(['@/components/talkArea/talkArea.vue'], resolve)
 export default {
   name: 'showArticle',
+  components: {
+    talkArea
+  },
   data () {
     return {
       readme: ''
