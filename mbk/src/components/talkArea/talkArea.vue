@@ -1,6 +1,6 @@
 <template>
   <div class="talk-area">
-    <p class="title">评论区</p>
+    <p class="title">开始吐槽</p>
     <div id="gitalk-container"></div>
   </div>
 </template>
@@ -14,19 +14,10 @@ export default {
       gitalk: {}
     }
   },
-  watch: {
-    '$route': {
-      handler (val) {
-        if (val.name === 'view') {
-          let id = JSON.parse(window.localStorage.getItem('article')).id
-          console.log('id', id)
-          this.initGitTalk(id)
-        }
-      },
-      immediate: true
-    }
-  },
   mounted () {
+    let id = JSON.parse(window.localStorage.getItem('article')).id
+    console.log('id', id)
+    this.initGitTalk(id)
   },
   methods: {
     initGitTalk (id) {
@@ -49,9 +40,10 @@ export default {
 
 <style scoped lang="scss">
 .talk-area {
-  background: #fff;
+  background: rgba(255, 255, 255, .9);
   box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   overflow: hidden;
   margin-top: 20px;
   .title {
@@ -74,7 +66,7 @@ export default {
       border: none;
     }
     .gt-comments {
-      height: 20vh;
+      height: 30vh;
       overflow: auto;
     }
   }

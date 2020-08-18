@@ -2,7 +2,7 @@
   <div class="layout-box">
     <div class="author-box">
       <author></author>
-      <talkArea></talkArea>
+      <!--<talkArea></talkArea>-->
     </div>
     <div class="view-container">
       <transition name="slide-fade">
