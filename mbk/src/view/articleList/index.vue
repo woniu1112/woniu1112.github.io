@@ -5,7 +5,10 @@
     </div>
     <div class="content" v-for="item in articles" :key="item.name" @click="titleClick(item)">
       <span>{{item.tittle}}</span>
-      <span>阅读</span>
+      <div class="tag-div">
+        <span v-for="(item2, index) in item.tag" :key="index">{{item2}}</span>
+      </div>
+      <!--<span>阅读</span>-->
     </div>
   </div>
 </template>
@@ -41,7 +44,7 @@ export default {
       el.innerHTML = val
       let articleInfo = {
         tittle: el.querySelector('#tittle').innerHTML,
-        tag: el.querySelector('#tittle').getAttribute('data-tag'),
+        tag: el.querySelector('#tittle').getAttribute('data-tag').split(/,|，/),
         id: el.querySelector('#tittle').getAttribute('data-id')
       }
       return articleInfo
@@ -80,6 +83,19 @@ export default {
         font-size: 18px;
         font-weight: bold;
         color: #88b99e;
+      }
+      .tag-div {
+        display: inline-block;
+        span {
+          display: inline-block;
+          color: #2c3e50;
+          border: 1px solid #075d513d;
+          padding: 0 10px;
+          font-size: 14px;
+          border-radius: 12px;
+          line-height: 25px;
+          margin-left: 3px;
+        }
       }
     }
     .content:hover {

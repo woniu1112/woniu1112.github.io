@@ -16,7 +16,6 @@ export default {
   },
   mounted () {
     let id = JSON.parse(window.localStorage.getItem('article')).id
-    console.log('id', id)
     this.initGitTalk(id)
   },
   methods: {

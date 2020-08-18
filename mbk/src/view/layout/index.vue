@@ -2,7 +2,9 @@
   <div class="layout-box">
     <div class="author-box">
       <author></author>
-      <!--<talkArea></talkArea>-->
+      <span id="busuanzi_value_site_pv"></span>
+      <span id="busuanzi_value_site_uv"></span>
+      <span id="busuanzi_value_page_pv"></span>
     </div>
     <div class="view-container">
       <transition name="slide-fade">
