@@ -12,6 +12,7 @@
       </transition>
     </div>
     <particles></particles>
+    <audio src="//mp3.9ku.com/hot/2014/07-16/642431.mp3" autoplay loop></audio>
   </div>
 </template>
 
@@ -25,6 +26,12 @@ export default {
     particles,
     author,
     talkArea
+  },
+  data () {
+    return {
+    }
+  },
+  mounted () {
   }
 }
 </script>

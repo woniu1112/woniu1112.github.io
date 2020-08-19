@@ -78,11 +78,11 @@ export default {
       -ms-transition: ease-in .2s;
       -o-transition: ease-in .2s;
       transition: ease-in .2s;
-      span:nth-of-type(1) {
+      & > span:nth-of-type(1) {
         margin-left: 10px;
         font-size: 18px;
         font-weight: bold;
-        color: #88b99e;
+        color: #1d1d1d;
       }
       .tag-div {
         display: inline-block;
@@ -108,7 +108,7 @@ export default {
       transform: scale(1.02);
     }
     .list-tittle {
-      background: #92b59c;
+      background: #a69292;
       line-height: 52px;
       font-size: 18px;
       color: #fff;
