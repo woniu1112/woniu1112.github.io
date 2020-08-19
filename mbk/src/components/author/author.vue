@@ -25,7 +25,7 @@ export default {
 <style scoped lang="scss">
   .author {
     background: #fff;
-    box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
+    box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     border-radius: 15px;
     overflow: hidden;
     img {
@@ -42,11 +42,11 @@ export default {
     .nav {
       display: flex;
       justify-content: space-around;
-      color: #88b99e;
+      color: #2c3e50;
     }
   }
   /deep/ .wh_content_all {
-    background-color: #92b59c !important;
+    background-color: #a69292 !important;
     .wh_content_item .wh_isToday {
       background: #ccc;
     }

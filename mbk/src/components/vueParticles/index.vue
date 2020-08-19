@@ -4,7 +4,7 @@
       color="#C0BFB8"
       :particleOpacity="0.7"
       :particlesNumber="60"
-      shapeType="circle"
+      shapeType="star"
       :particleSize="2"
       linesColor="#ccc"
       :linesWidth="1"
@@ -35,6 +35,6 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  pointer-events: none;
+  z-index: 1;
 }
 </style>

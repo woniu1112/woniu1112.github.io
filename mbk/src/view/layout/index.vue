@@ -32,17 +32,20 @@ export default {
 <style scoped lang="scss">
   .layout-box {
     height: 100%;
-    margin-top: 50px;
-    padding-left: 20px;
+    width: 80%;
+    margin: 50px auto 0;
   }
   .author-box {
     float: left;
-    width: 400px;
+    width: 300px;
+    position: relative;
+    z-index: 100;
   }
   .view-container {
     position: relative;
-    margin-left: 400px;
+    margin-left: 300px;
     padding: 0 10px;
+    z-index: 100;
   }
   .slide-fade-enter-active {
     transition: all 2s ease;

@@ -43,8 +43,8 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-align: left;
-  background: transparent url('../assets/img/bg-body.jpg') repeat-x;
-  background-color: #faf7ef;
+  //background: transparent url('../assets/img/bg-body.jpg') repeat-x;
+  background: #6e6858;
   padding: 10px;
 }
 
@@ -128,7 +128,7 @@ blockquote:after {
   height:10px;
 }
 #markdownBox::-webkit-scrollbar-track, .gt-comments::-webkit-scrollbar-track{
-  background: radial-gradient(#b3ef85, transparent);
+  background: radial-gradient(#6e6858, transparent);
   border-radius:2px;
 }
 #markdownBox::-webkit-scrollbar-thumb, .gt-comments::-webkit-scrollbar-thumb{

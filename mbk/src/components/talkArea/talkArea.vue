@@ -40,7 +40,7 @@ export default {
 <style scoped lang="scss">
 .talk-area {
   background: rgba(255, 255, 255, .9);
-  box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
+  box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   overflow: hidden;
@@ -59,13 +59,14 @@ export default {
 <style lang="scss">
   #gitalk-container {
     padding: 0 5px;
+    background: #bdbbbb;
     .gt-container .gt-meta {
       margin: 0!important;
       padding: 8px 0;
       border: none;
     }
     .gt-comments {
-      height: 30vh;
+      height: 50vh;
       overflow: auto;
     }
   }

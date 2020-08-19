@@ -59,7 +59,7 @@ export default {
     margin: 0 auto;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
+    box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     overflow: auto;
     height: 90vh;
     .content {
@@ -99,7 +99,7 @@ export default {
       }
     }
     .content:hover {
-      box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
+      box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
       border-radius: 15px;
       -webkit-transform: scale(1.02);
       -moz-transform: scale(1.02);

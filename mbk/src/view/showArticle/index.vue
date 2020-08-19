@@ -62,8 +62,8 @@ export default {
     .talk-area {
       position: absolute;
       top: 32px;
-      left: 6.5%;
-      width: 56%;
+      left: 6.4%;
+      width: 100%;
       -webkit-transition: ease-in-out .5s;
       -moz-transition: ease-in-out .5s;
       -ms-transition: ease-in-out .5s;
@@ -74,9 +74,9 @@ export default {
   #markdownBox {
     max-width: 80%;
     margin: 0 auto;
-    background: #fff;
+    background: #ac9a9a;
     border-radius: 15px;
-    box-shadow: 2px 2px 16px 5px rgba(219, 219, 219, .8);
+    box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     overflow: auto;
     height: 90vh;
   }
