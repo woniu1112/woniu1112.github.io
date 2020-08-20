@@ -240,7 +240,7 @@ body > *:last-child {
 }
 
 #write a {
-    color: #42b983;
+    color: #970d2a;
     font-weight: 600;
     padding: 0px 2px;
     text-decoration: none;
@@ -428,11 +428,13 @@ blockquote > p {
 }
 
 table {
-    font-family: var(--font-monospace);
-    font-size: 0.85rem;
-    padding: 0;
-    overflow: hidden;
-    word-break: initial;
+  margin: 0 auto;
+  width: 100%;
+  font-family: var(--font-monospace);
+  font-size: 0.85rem;
+  padding: 0;
+  overflow: hidden;
+  word-break: initial;
 }
 
 table tr {
@@ -517,7 +519,7 @@ table tr td:last-child {
     font-family: var(--font-monospace);
     font-weight: bold;
     font-size: 0.85rem;
-    color: #ba5e08;
+    color: #8c4706;
     /*background-color: rgba(194,197,196, 0.2);*/
 }
 

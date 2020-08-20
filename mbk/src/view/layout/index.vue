@@ -2,9 +2,6 @@
   <div class="layout-box">
     <div class="author-box">
       <author></author>
-      <span id="busuanzi_value_site_pv"></span>
-      <span id="busuanzi_value_site_uv"></span>
-      <span id="busuanzi_value_page_pv"></span>
     </div>
     <div class="view-container">
       <transition name="slide-fade">
@@ -44,13 +41,14 @@ export default {
   }
   .author-box {
     float: left;
-    width: 300px;
+    width: 20%;
+    min-width: 250px;
     position: relative;
     z-index: 100;
   }
   .view-container {
     position: relative;
-    margin-left: 300px;
+    margin-left: 20%;
     padding: 0 10px;
     z-index: 100;
   }

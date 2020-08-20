@@ -33,6 +33,7 @@ export default {
       }
       this.articles.push(info)
     })
+    this.articles = this.articles.sort((a, b) => b.id - a.id)
   },
   methods: {
     titleClick (item) {
