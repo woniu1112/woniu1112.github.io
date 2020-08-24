@@ -39,6 +39,11 @@ export default {
     width: 80%;
     margin: 50px auto 0;
   }
+  @media screen and (max-width: 1020px){
+    .layout-box {
+      width: 98%;
+    }
+  }
   .author-box {
     float: left;
     width: 20%;
