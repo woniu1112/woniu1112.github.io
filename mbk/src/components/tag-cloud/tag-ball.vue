@@ -33,9 +33,10 @@ export default {
   },
   methods: {
     titleClick (item) {
-      // window.localStorage.setItem('article', JSON.stringify(item))
-      // this.$router.push({name: 'view'})
       this.$state.articles = item
+      if (this.$route.name !== 'view') {
+        this.$router.push({name: 'view'})
+      }
     },
     start: function () {
       this.btnContent = '停止'
