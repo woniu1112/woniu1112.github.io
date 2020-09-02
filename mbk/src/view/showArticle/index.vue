@@ -88,7 +88,7 @@ export default {
     max-width: 80%;
     margin: 0 auto;
     background: #ac9a9a;
-    border-radius: 15px;
+    border-radius: 3px;
     box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     overflow: auto;
     height: 90vh;

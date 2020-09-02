@@ -26,7 +26,7 @@ export default {
   .author {
     background: #fff;
     box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
-    border-radius: 15px;
+    border-radius: 3px;
     overflow: hidden;
     img {
       width: 80px;

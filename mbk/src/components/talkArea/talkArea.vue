@@ -16,13 +16,17 @@ export default {
     }
   },
   watch: {
-    articles (val) {
-      this.initGitTalk(val.id)
+    articles: {
+      handler (val) {
+        this.gitalk = {}
+        document.querySelector('#gitalk-container').innerHTML = ''
+        this.initGitTalk(Number(val.id))
+      }
     }
   },
   mounted () {
-    let id = JSON.parse(window.localStorage.getItem('article')).id
-    this.initGitTalk(id)
+    // let id = JSON.parse(window.localStorage.getItem('article')).id
+    this.initGitTalk(this.articles.id)
   },
   methods: {
     initGitTalk (id) {

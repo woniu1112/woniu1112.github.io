@@ -3,12 +3,18 @@ import Router from 'vue-router'
 import layout from '@/view/layout'
 import view from '@/view/showArticle'
 import articleList from '@/view/articleList'
+import main from '@/view/main'
 
 Vue.use(Router)
 
 let routes = [
   {
     path: '/',
+    name: 'main',
+    component: main
+  },
+  {
+    path: '/layout',
     name: 'layout',
     redirect: 'articleList',
     component: layout,

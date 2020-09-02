@@ -25,9 +25,9 @@ export default {
       running: false
     }
   },
-  mounted: function () {
+  mounted () {
     this.setElCanvasStyle()
-    this.$nextTick(function () {
+    this.$nextTick(() => {
       this.initTagCanvas()
     })
   },
@@ -38,18 +38,18 @@ export default {
         this.$router.push({name: 'view'})
       }
     },
-    start: function () {
+    start () {
       this.btnContent = '停止'
       window.TagCanvas.SetSpeed('myCanvas', [5, 1])
     },
-    stop: function () {
+    stop () {
       this.btnContent = '开始'
       window.TagCanvas.SetSpeed('myCanvas', [0.1 * Math.random() + 0.01, -(0.1 * Math.random() + 0.01)])
     },
     /**
      * 设置canvas样式
      */
-    setElCanvasStyle: function () {
+    setElCanvasStyle () {
       var canvas = this.$refs.canvas
       canvas.width = document.querySelector('#tagBox').offsetWidth
       canvas.height = 300
@@ -57,28 +57,26 @@ export default {
     /**
      * 初始化tagCanvas
      */
-    initTagCanvas: function () {
-      window.onload = function () {
-        try {
-          window.TagCanvas.Start('myCanvas', 'tags', {
-            // textHeight: 20,
-            textColour: null,
-            pulsateTo: 0,
-            outlineThickness: 0,
-            dragControl: 1,
-            decel: 0.95,
-            minSpeed: 0.01,
-            initial: [
-              0.1 * Math.random() + 0.01,
-              -(0.1 * Math.random() + 0.01)
-            ],
-            weight: true,
-            weightMode: 'color',
-            weightGradient: {0: '#f00', 0.33: '#ff0', 0.66: '#0f0', 1: '#00f'}
-          })
-        } catch (e) {
-          console.log(e)
-        }
+    initTagCanvas () {
+      try {
+        window.TagCanvas.Start('myCanvas', 'tags', {
+          // textHeight: 20,
+          textColour: null,
+          pulsateTo: 0,
+          outlineThickness: 0,
+          dragControl: 1,
+          decel: 0.95,
+          minSpeed: 0.01,
+          initial: [
+            0.1 * Math.random() + 0.01,
+            -(0.1 * Math.random() + 0.01)
+          ],
+          weight: true,
+          // weightMode: ,
+          weightGradient: {0: '#f00', 0.33: '#ff0', 0.66: '#0f0', 1: '#00f'}
+        })
+      } catch (e) {
+        console.log(e)
       }
     }
   }
@@ -89,7 +87,7 @@ export default {
 .container {
   background: #fff9ec;
   box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
-  border-radius: 15px;
+  border-radius: 3px;
   overflow: hidden;
   margin-top: 10px;
   & > p {
