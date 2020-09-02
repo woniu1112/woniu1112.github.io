@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created () {
+    // 在页面刷新时将 $state 里的信息保存到sessionStorage里
+    window.addEventListener('beforeunload', () => {
+      window.sessionStorage.setItem('myState', JSON.stringify(this.$state))
+    })
+  }
 }
 </script>
 

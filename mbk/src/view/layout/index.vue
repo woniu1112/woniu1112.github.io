@@ -2,6 +2,7 @@
   <div class="layout-box">
     <div class="author-box">
       <author></author>
+      <tagBall></tagBall>
     </div>
     <div class="view-container">
       <transition name="slide-fade">
@@ -17,12 +18,14 @@
 const particles = resolve => require(['@/components/vueParticles/index'], resolve)
 const author = resolve => require(['@/components/author/author.vue'], resolve)
 const talkArea = resolve => require(['@/components/talkArea/talkArea.vue'], resolve)
+const tagBall = resolve => require(['@/components/tag-cloud/tag-ball.vue'], resolve)
 export default {
   name: 'layout',
   components: {
     particles,
     author,
-    talkArea
+    talkArea,
+    tagBall
   },
   data () {
     return {

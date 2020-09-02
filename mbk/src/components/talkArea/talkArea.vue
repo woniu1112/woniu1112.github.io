@@ -9,9 +9,15 @@
 /* eslint-disable no-undef */
 export default {
   name: 'talk-area',
+  props: ['articles'],
   data () {
     return {
       gitalk: {}
+    }
+  },
+  watch: {
+    articles (val) {
+      this.initGitTalk(val.id)
     }
   },
   mounted () {

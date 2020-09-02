@@ -5,7 +5,7 @@
     </div>
     <button class="btn" @click="talkArticle">{{btnword}}</button>
     <div class="talk-area" :style="{width: talkAreaWidth, opacity: talkAreaWidth ? 1 : 0}">
-      <talkArea></talkArea>
+      <talkArea :articles="articles"></talkArea>
     </div>
   </div>
 </template>
@@ -18,6 +18,17 @@ export default {
   components: {
     talkArea
   },
+  computed: {
+    articles () {
+      return this.$state.articles
+    }
+  },
+  watch: {
+    articles: {
+      handler: 'initRender',
+      immediate: true
+    }
+  },
   data () {
     return {
       readme: '',
@@ -26,10 +37,12 @@ export default {
     }
   },
   mounted () {
-    let name = JSON.parse(window.localStorage.getItem('article')).name
-    this.readme = require('@/article/' + name + '.md')
   },
   methods: {
+    initRender (newVal) {
+      let name = this.articles.name
+      this.readme = require('@/article/' + name + '.md')
+    },
     talkArticle () {
       if (this.btnword === '吐槽') {
         this.talkAreaWidth = '56%'

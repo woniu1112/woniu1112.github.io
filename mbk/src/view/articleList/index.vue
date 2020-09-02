@@ -15,6 +15,7 @@
 
 <script>
 const modulesFiles = require.context('@/article', true, /.md$/)
+
 export default {
   name: 'article-list',
   data () {
@@ -34,10 +35,12 @@ export default {
       this.articles.push(info)
     })
     this.articles = this.articles.sort((a, b) => b.id - a.id)
+    window.localStorage.setItem('articles', JSON.stringify(this.articles))
   },
   methods: {
     titleClick (item) {
-      window.localStorage.setItem('article', JSON.stringify(item))
+      // window.localStorage.setItem('article', JSON.stringify(item))
+      this.$state.articles = item
       this.$router.push({name: 'view'})
     },
     getTittle (val) {
