@@ -1,7 +1,8 @@
 <template>
   <div class="main-view">
+    <animeComponent></animeComponent>
     <div class="content">
-      life is so long , be you want to be , do you want to do
+      {{content}}
     </div>
     <div class="begin">
       <span @click="handlerClick">start</span>
@@ -10,8 +11,17 @@
 </template>
 
 <script>
+const animeComponent = resolve => require(['@/components/anime/anime.vue'], resolve)
 export default {
   name: 'main-view',
+  components: {
+    animeComponent
+  },
+  data () {
+    return {
+      content: 'Life only onece , be you want to be , do you want to do'
+    }
+  },
   methods: {
     handlerClick () {
       this.$router.push({name: 'layout'})
@@ -22,7 +32,7 @@ export default {
 
 <style scoped lang="scss">
 .main-view {
-  margin: 30vh auto;
+  margin: 0 auto;
   color: #fff;
   & > div {
     font-size: 52px;
