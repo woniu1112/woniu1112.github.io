@@ -21,39 +21,55 @@ export default {
   name: 'article-list',
   data () {
     return {
-      articles: []
+      articles: [],
+      tags: []
+    }
+  },
+  watch: {
+    '$route': {
+      handler: 'getArticles'
     }
   },
   mounted () {
-    modulesFiles.keys().map(modulePath => {
-      const moduleName = modulePath.replace(/^.\/(.*)\.md/, '$1')
-      const value = modulesFiles(modulePath)
-      let info = {
-        ...this.getTittle(value),
-        name: moduleName,
-        url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
-      }
-      this.articles.push(info)
-    })
-    this.articles = this.articles.sort((a, b) => this.dateForTime(b.date) - this.dateForTime(a.date))
-    window.localStorage.setItem('articles', JSON.stringify(this.articles))
+    this.getArticles()
   },
   methods: {
+    getArticles () {
+      this.articles = []
+      modulesFiles.keys().map(modulePath => {
+        const moduleName = modulePath.replace(/^.\/(.*)\.md/, '$1')
+        const value = modulesFiles(modulePath)
+        let info = {
+          ...this.getInfo(value),
+          name: moduleName,
+          url: modulePath.replace(/^.\/(.*\.md)/, '@/article/$1')
+        }
+        this.articles.push(info)
+      })
+      // 按时间排序
+      this.articles = this.articles.sort((a, b) => this.dateForTime(b.date) - this.dateForTime(a.date))
+      if (this.$route.query.type) {
+        this.articles = this.articles.filter(item => item.tag.includes(this.$route.query.type))
+      }
+      // 获取tag
+      this.$state.tags = [...new Set(this.tags)]
+      window.localStorage.setItem('articles', JSON.stringify(this.articles))
+    },
     titleClick (item) {
-      // window.localStorage.setItem('article', JSON.stringify(item))
       this.$state.articles = item
       this.$router.push({name: 'view'})
     },
-    getTittle (val) {
+    getInfo (val) {
       let el = document.createElement('div')
       el.innerHTML = val
       let titleDom = el.querySelector('#tittle')
       let articleInfo = {
         tittle: titleDom.innerHTML,
-        tag: titleDom.getAttribute('data-tag').split(/,|，/),
+        tag: titleDom.getAttribute('data-tag').split(/,|，/) || [],
         id: cryptoJs.MD5(titleDom.innerHTML).toString(),
         date: titleDom.getAttribute('data-date')
       }
+      this.tags = this.tags.concat(titleDom.getAttribute('data-tag').split(/,|，/))
       return articleInfo
     },
     dateForTime (time) {

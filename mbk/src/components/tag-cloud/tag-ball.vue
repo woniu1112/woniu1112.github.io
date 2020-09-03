@@ -7,7 +7,7 @@
       </div>
       <div id="tags">
         <ul>
-          <li v-for="item in tags" :key="item.id" @click="titleClick(item)"><a href="javascript: void(0)">{{ item.tittle }}</a></li>
+          <li v-for="item in tags" :key="item" @click="titleClick(item)"><a href="javascript: void(0)">{{ item }}</a></li>
         </ul>
       </div>
     </div>
@@ -20,7 +20,7 @@ export default {
   name: 'tag-ball',
   data () {
     return {
-      tags: JSON.parse(window.localStorage.getItem('articles')) || [],
+      tags: this.$state.tags || [],
       btnContent: '开始',
       running: false
     }
@@ -33,10 +33,9 @@ export default {
   },
   methods: {
     titleClick (item) {
-      this.$state.articles = item
-      if (this.$route.name !== 'view') {
-        this.$router.push({name: 'view'})
-      }
+      // if (this.$route.name !== 'view') {
+      this.$router.push({name: 'articleList', query: {type: item}})
+      // }
     },
     start () {
       this.btnContent = '停止'
