@@ -20,7 +20,7 @@ export default {
       handler (val) {
         this.gitalk = {}
         document.querySelector('#gitalk-container').innerHTML = ''
-        this.initGitTalk(Number(val.id))
+        this.initGitTalk(val.id)
       }
     }
   },

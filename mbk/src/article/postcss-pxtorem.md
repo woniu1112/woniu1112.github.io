@@ -1,4 +1,4 @@
-<p id="tittle" data-id="4" data-tag="vue,postcss-pxtorem,js">postcss-pxtorem移动端适配</p>
+<p id="tittle" data-date="2019-08-03" data-tag="vue,postcss-pxtorem,js">postcss-pxtorem移动端适配</p>
 
 ---------------------------------------
 

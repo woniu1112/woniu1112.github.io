@@ -233,6 +233,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .svg-box {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+  }
   svg {
     display: block;
     margin: 0 auto;

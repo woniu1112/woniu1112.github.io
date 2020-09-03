@@ -1,4 +1,4 @@
-<p id="tittle" data-id="3" data-tag="vue,vue-router,js">vue-router 权限配置</p>
+<p id="tittle" data-date="2018-10-03" data-tag="vue,vue-router,js">vue-router 权限配置</p>
 
 ---------------------------------------------------------------------
 

@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import cryptoJs from 'crypto-js'
 const modulesFiles = require.context('@/article', true, /.md$/)
 
 export default {
@@ -34,7 +35,7 @@ export default {
       }
       this.articles.push(info)
     })
-    this.articles = this.articles.sort((a, b) => b.id - a.id)
+    this.articles = this.articles.sort((a, b) => this.dateForTime(b.date) - this.dateForTime(a.date))
     window.localStorage.setItem('articles', JSON.stringify(this.articles))
   },
   methods: {
@@ -46,12 +47,17 @@ export default {
     getTittle (val) {
       let el = document.createElement('div')
       el.innerHTML = val
+      let titleDom = el.querySelector('#tittle')
       let articleInfo = {
-        tittle: el.querySelector('#tittle').innerHTML,
-        tag: el.querySelector('#tittle').getAttribute('data-tag').split(/,|，/),
-        id: el.querySelector('#tittle').getAttribute('data-id')
+        tittle: titleDom.innerHTML,
+        tag: titleDom.getAttribute('data-tag').split(/,|，/),
+        id: cryptoJs.MD5(titleDom.innerHTML).toString(),
+        date: titleDom.getAttribute('data-date')
       }
       return articleInfo
+    },
+    dateForTime (time) {
+      return new Date(time).getTime()
     }
   }
 }
