@@ -51,13 +51,11 @@ export default {
 .talk-area {
   background: rgba(255, 255, 255, .9);
   box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   overflow: hidden;
   margin-top: 20px;
   .title {
     font-weight: bold;
-    background: #92b59c;
+    background: #a38a8a;
     margin: 0;
     height: 40px;
     text-align: center;
@@ -76,8 +74,8 @@ export default {
       border: none;
     }
     .gt-comments {
-      height: 50vh;
-      overflow: auto;
+      /*height: 50vh;*/
+      /*overflow: auto;*/
     }
   }
 </style>

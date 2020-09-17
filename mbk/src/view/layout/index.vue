@@ -1,14 +1,18 @@
 <template>
   <div class="layout-box">
-    <div class="author-box">
-      <author></author>
-      <tagBall></tagBall>
+    <mainHeader></mainHeader>
+    <div class="main">
+      <div class="author-box">
+        <author></author>
+        <tagBall></tagBall>
+      </div>
+      <div class="view-container">
+        <transition name="slide-fade">
+          <router-view></router-view>
+        </transition>
+      </div>
     </div>
-    <div class="view-container">
-      <transition name="slide-fade">
-        <router-view></router-view>
-      </transition>
-    </div>
+    <mainFooter></mainFooter>
     <particles></particles>
     <audio src="//mp3.9ku.com/hot/2014/07-16/642431.mp3" autoplay loop></audio>
   </div>
@@ -19,28 +23,47 @@ const particles = resolve => require(['@/components/vueParticles/index'], resolv
 const author = resolve => require(['@/components/author/author.vue'], resolve)
 const talkArea = resolve => require(['@/components/talkArea/talkArea.vue'], resolve)
 const tagBall = resolve => require(['@/components/tag-cloud/tag-ball.vue'], resolve)
+const mainHeader = resolve => require(['./components/header.vue'], resolve)
+const mainFooter = resolve => require(['./components/footer.vue'], resolve)
 export default {
   name: 'layout',
   components: {
     particles,
     author,
     talkArea,
-    tagBall
+    tagBall,
+    mainHeader,
+    mainFooter
   },
   data () {
     return {
+      domTagBall: ''
     }
   },
   mounted () {
+    this.$nextTick(vm => {
+      document.body.addEventListener('scroll', this.windowScroll, false)
+    })
+  },
+  methods: {
+    windowScroll (e) {
+      let scrollTop = e.target.scrollTop
+      let mainHeader = document.querySelector('#mainHeader')
+      if (scrollTop > 0) {
+        mainHeader.style.background = 'rgba(0,0,0,.2)'
+      }
+      if (scrollTop === 0) {
+        mainHeader.style.background = 'rgba(0,0,0,.8)'
+      }
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
-  .layout-box {
-    height: 100%;
+  .main {
+    margin: 58px auto 20px;
     width: 80%;
-    margin: 50px auto 0;
   }
   @media screen and (max-width: 1020px){
     .layout-box {

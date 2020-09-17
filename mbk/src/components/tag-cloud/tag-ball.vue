@@ -1,5 +1,5 @@
 <template>
-  <div class="tag-ball">
+  <div class="tag-ball" id="tagBall">
     <div class="container" id="tagBox">
       <p>标签云</p>
       <div id="myCanvasContainer" class="canvas-container">
@@ -96,6 +96,9 @@ export default {
     line-height: 50px;
     text-align: center;
     font-weight: bold;
+  }
+  .canvas-container {
+    height: 345px;
   }
 }
 </style>

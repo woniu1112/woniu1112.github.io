@@ -3,7 +3,7 @@
     <!--<animeComponent></animeComponent>-->
     <div class="content">
       <img class="fly-img" src="//cdn.jsdelivr.net/gh/woniu1112/static-cdn/static/img/fly.png" alt="">
-      {{content}}
+      <div id="word">{{content}}<span></span></div>
     </div>
     <div class="begin">
       <span @click="handlerClick">start</span>
@@ -22,6 +22,8 @@ export default {
     return {
       content: 'Life only onece , be you want to be , do you want to do'
     }
+  },
+  mounted () {
   },
   methods: {
     handlerClick () {
@@ -43,6 +45,11 @@ export default {
     max-width: 736px;
     margin: 0 auto;
     position: relative;
+    #word {
+      text-shadow: 0 7px 5px #123;
+      -webkit-text-stroke: 2px #fff;
+      -webkit-text-fill-color : transparent;
+    }
     .fly-img {
       width: 50px;
       position: absolute;
@@ -111,8 +118,11 @@ export default {
   .begin {
     span {
       cursor: pointer;
-      text-decoration: underline;
-      animation: spanColor 2s linear 7s infinite;
+      /*text-decoration: underline;*/
+      animation: spanColor 3s linear 7s infinite;
+      -webkit-text-stroke: 2px #fff;
+      /*-webkit-text-fill-color : transparent;*/
+      text-shadow: 0 7px 5px #123;
     }
     @keyframes spanColor {
       0% {

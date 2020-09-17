@@ -2,12 +2,7 @@
   <div>
     <div class="author">
       <img src="https://avatars2.githubusercontent.com/u/23164486?s=60&v=4" alt="">
-      <div class="nav">
-        <router-link to="/">首页</router-link>
-        <a href="//www.cnblogs.com/" target="_blank">博客园</a>
-        <router-link to="/articleList">文章</router-link>
-      </div>
-      <p>Email：syl18188@163.com</p>
+      <p>woniu1112</p>
       <CalenderComponent></CalenderComponent>
     </div>
   </div>
