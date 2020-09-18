@@ -42,11 +42,11 @@ export default {
   },
   mounted () {
     this.$nextTick(vm => {
-      document.body.addEventListener('scroll', this.windowScroll, false)
+      document.body.addEventListener('scroll', this.bodyScroll, false)
     })
   },
   methods: {
-    windowScroll (e) {
+    bodyScroll (e) {
       let scrollTop = e.target.scrollTop
       let mainHeader = document.querySelector('#mainHeader')
       if (scrollTop > 0) {
@@ -56,6 +56,9 @@ export default {
         mainHeader.style.background = 'rgba(0,0,0,.8)'
       }
     }
+  },
+  beforeDestroy () {
+    document.removeEventListener('scroll', this.bodyScroll)
   }
 }
 </script>

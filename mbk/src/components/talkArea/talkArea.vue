@@ -1,6 +1,6 @@
 <template>
   <div class="talk-area">
-    <p class="title">开始吐槽</p>
+    <p class="title">评论区</p>
     <div id="gitalk-container"></div>
   </div>
 </template>

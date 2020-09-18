@@ -6,10 +6,6 @@
         <talkArea :articles="articles"></talkArea>
       </div>
     </div>
-    <!--<button class="btn" @click="talkArticle">{{btnword}}</button>-->
-    <!--<div class="talk-area" :style="{width: talkAreaWidth, opacity: talkAreaWidth ? 1 : 0}">-->
-      <!--<talkArea :articles="articles"></talkArea>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -35,7 +31,6 @@ export default {
   data () {
     return {
       readme: '',
-      // btnword: '吐槽',
       talkAreaWidth: 0
     }
   },
@@ -46,14 +41,6 @@ export default {
       let name = this.articles.name
       this.readme = require('@/article/' + name + '.md')
     }
-    // talkArticle () {
-    //   if (this.btnword === '吐槽') {
-    //     this.talkAreaWidth = '56%'
-    //   } else {
-    //     this.talkAreaWidth = 0
-    //   }
-    //   this.btnword = this.btnword === '吐槽' ? '放弃' : '吐槽'
-    // }
   }
 }
 </script>

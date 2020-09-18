@@ -22,16 +22,31 @@ export default {
     return {
       tags: this.$state.tags || [],
       btnContent: '开始',
-      running: false
+      running: false,
+      domtagBall: '',
+      offsetTop: ''
     }
   },
   mounted () {
     this.setElCanvasStyle()
     this.$nextTick(() => {
       this.initTagCanvas()
+      this.domtagBall = document.querySelector('#tagBall')
+      this.offsetTop = this.domtagBall.offsetTop
+      document.body.addEventListener('scroll', this.bodyScroll, false)
     })
   },
+  beforeDestroy () {
+    document.body.removeEventListener('scroll', this.bodyScroll)
+  },
   methods: {
+    bodyScroll (e) {
+      if (e.target.scrollTop > this.offsetTop) {
+        this.domtagBall.setAttribute('class', 'positon-cloud tag-ball')
+      } else {
+        this.domtagBall.setAttribute('class', 'tag-ball')
+      }
+    },
     titleClick (item) {
       // if (this.$route.name !== 'view') {
       this.$router.push({name: 'articleList', query: {type: item}})
@@ -101,4 +116,8 @@ export default {
     height: 345px;
   }
 }
+  .positon-cloud {
+    position: fixed;
+    top: 50px;
+  }
 </style>

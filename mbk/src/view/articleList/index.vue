@@ -1,7 +1,7 @@
 <template>
   <div class="article-list">
     <div class="list-tittle">
-      吐槽文章
+      文章
     </div>
     <div class="content" v-for="item in articles" :key="item.name" @click="titleClick(item)">
       <span>{{item.tittle}}</span>
