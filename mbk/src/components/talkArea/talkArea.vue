@@ -32,6 +32,7 @@ export default {
     initGitTalk (id) {
       this.gitalk = new Gitalk({
         id: id || '',
+        title: this.$state.articles,
         clientID: '627fafddf767c8014821',
         clientSecret: '835037abb7b9be36bf5ef50d7249bd80a7493c92',
         repo: 'talkArea',
