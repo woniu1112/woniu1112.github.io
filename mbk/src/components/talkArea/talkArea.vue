@@ -68,7 +68,7 @@ export default {
 <style lang="scss">
   #gitalk-container {
     padding: 0 5px;
-    background: #bdbbbb;
+    /*background: #bdbbbb;*/
     .gt-container .gt-meta {
       margin: 0!important;
       padding: 8px 0;

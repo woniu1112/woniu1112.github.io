@@ -83,7 +83,7 @@ export default {
   .article-list {
     max-width: 80%;
     margin: 0 auto;
-    background: #fff;
+    background: rgba(255,255,255, .6);
     border-radius: 3px;
     box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     overflow: auto;
@@ -134,7 +134,7 @@ export default {
       transform: scale(1.02);
     }
     .list-tittle {
-      background: #a69292;
+      background-color: rgba(166,146,146,.8);
       line-height: 52px;
       font-size: 18px;
       color: #fff;

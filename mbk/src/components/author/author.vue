@@ -20,7 +20,7 @@ export default {
 
 <style scoped lang="scss">
   .author {
-    background: #fff;
+    background: rgba(255,255,255, .6);
     box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
     border-radius: 3px;
     overflow: hidden;
@@ -42,7 +42,7 @@ export default {
     }
   }
   /deep/ .wh_content_all {
-    background-color: #a69292 !important;
+    background-color: rgba(166,146,146,.6) !important;
     .wh_content_item .wh_isToday {
       background: #ccc;
     }

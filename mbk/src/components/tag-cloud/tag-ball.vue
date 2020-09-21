@@ -99,13 +99,13 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  background: #fff9ec;
+  background: rgba(255,255,255, .6);
   box-shadow: 2px 2px 16px 5px rgba(188, 173, 178, .5);
   border-radius: 3px;
   overflow: hidden;
   margin-top: 10px;
   & > p {
-    background: #ac9a9a;
+    background-color: rgba(166,146,146,.8);
     color: #fff;
     margin: 0;
     line-height: 50px;
