@@ -13,7 +13,7 @@
       </div>
     </div>
     <mainFooter></mainFooter>
-    <particles></particles>
+    <!--<particles></particles>-->
     <audio src="//mp3.9ku.com/hot/2014/07-16/642431.mp3" autoplay loop></audio>
   </div>
 </template>
