@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="author">
-      <img src="https://avatars2.githubusercontent.com/u/23164486?s=60&v=4" alt="">
+      <img src="//cdn.jsdelivr.net/gh/woniu1112/static-cdn/static/img/header.png" alt="">
       <p>woniu1112</p>
       <CalenderComponent></CalenderComponent>
     </div>
