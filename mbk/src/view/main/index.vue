@@ -60,7 +60,7 @@ export default {
       -ms-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
-      animation: flyAnime 6s linear 1s;
+      animation: flyAnime 3s linear 1s;
       animation-fill-mode:forwards;
     }
     @keyframes flyAnime {

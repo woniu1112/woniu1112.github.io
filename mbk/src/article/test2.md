@@ -1,5 +1,5 @@
 
-<p id="tittle" data-date="2019-10-03" data-tag="随笔,js，npm">拿到npm命令行中的一些属性</p>
+<p id="tittle" data-date="2019-10-03" data-tag="随笔,js，npm,node">拿到npm命令行中的一些属性</p>
 
 --------------------------------------------
 
